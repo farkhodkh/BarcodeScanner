@@ -1,5 +1,5 @@
-# Apple-Frameworks
-Apple frameworks list demo application
+# Barcode scanner
+Barcode scanner demo application
 
 
 Simple Demo
