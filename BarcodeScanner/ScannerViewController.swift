@@ -9,8 +9,8 @@ import AVFoundation
 import UIKit
 
 enum ScannerError: String {
-    case invalidDeviceError = "Ошибка при работе с камерой. Не удалось прочитать данные с устройства"
-    case invalidScannedValue = "Ошибка чтения данных сканера. Штрих код должен быть EAN18 или EAN13"
+    case invalidDeviceError
+    case invalidScannedValue
 }
 
 protocol ScannerViewControllerDelegate: AnyObject {

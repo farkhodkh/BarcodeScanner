@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScannerView: UIViewControllerRepresentable {
     @Binding var scannedCode: String
+    @Binding var alertItem: AlertItem?
     
     func makeUIViewController(context: Context) -> ScannerViewController {
         ScannerViewController(scannerDelegate:context.coordinator)
@@ -29,7 +30,12 @@ struct ScannerView: UIViewControllerRepresentable {
         }
         
         func didSurfaceError(error: ScannerError) {
-            print(error.rawValue)
+            switch (error) {
+            case .invalidDeviceError:
+                scannerView.alertItem = AlertContext.invalidviceInput
+            case .invalidScannedValue:
+                scannerView.alertItem = AlertContext.invalidScannedValue
+            }
         }
         
         func didFind(barcode: String) {
@@ -38,9 +44,12 @@ struct ScannerView: UIViewControllerRepresentable {
         }
     }
 }
-
-struct ScannerView_Previews: PreviewProvider {
-    static var previews: some View {
-        ScannerView(scannedCode: .constant("123456789"))
-    }
-}
+//
+//struct ScannerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ScannerView(
+//            scannedCode: .constant("123456789"),
+//            alertItem: nil
+//        )
+//    }
+//}
