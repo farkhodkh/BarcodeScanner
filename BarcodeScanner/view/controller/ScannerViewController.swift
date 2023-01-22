@@ -8,16 +8,6 @@
 import AVFoundation
 import UIKit
 
-enum ScannerError: String {
-    case invalidDeviceError
-    case invalidScannedValue
-}
-
-protocol ScannerViewControllerDelegate: AnyObject {
-    func didSurfaceError(error: ScannerError)
-    func didFind(barcode: String)
-}
-
 final class ScannerViewController: UIViewController {
     let captureSession = AVCaptureSession()
     var previewLayer: AVCaptureVideoPreviewLayer?
