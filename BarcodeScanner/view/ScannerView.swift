@@ -44,12 +44,4 @@ struct ScannerView: UIViewControllerRepresentable {
         }
     }
 }
-//
-//struct ScannerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ScannerView(
-//            scannedCode: .constant("123456789"),
-//            alertItem: nil
-//        )
-//    }
-//}
+
