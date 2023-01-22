@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		E8019BB72976D9BD0030A63B /* BarcodeScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8019BB62976D9BD0030A63B /* BarcodeScannerApp.swift */; };
-		E8019BB92976D9BD0030A63B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8019BB82976D9BD0030A63B /* ContentView.swift */; };
+		E8019BB92976D9BD0030A63B /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8019BB82976D9BD0030A63B /* BarcodeScannerView.swift */; };
 		E8019BBB2976D9BE0030A63B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8019BBA2976D9BE0030A63B /* Assets.xcassets */; };
 		E8019BBE2976D9BE0030A63B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8019BBD2976D9BE0030A63B /* Preview Assets.xcassets */; };
+		E8019BC6297D53A90030A63B /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8019BC5297D53A90030A63B /* ScannerViewController.swift */; };
+		E8019BC8297D5F5B0030A63B /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8019BC7297D5F5B0030A63B /* ScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E8019BB32976D9BD0030A63B /* BarcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8019BB62976D9BD0030A63B /* BarcodeScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerApp.swift; sourceTree = "<group>"; };
-		E8019BB82976D9BD0030A63B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E8019BB82976D9BD0030A63B /* BarcodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
 		E8019BBA2976D9BE0030A63B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8019BBD2976D9BE0030A63B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E8019BC5297D53A90030A63B /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		E8019BC7297D5F5B0030A63B /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				E8019BB62976D9BD0030A63B /* BarcodeScannerApp.swift */,
-				E8019BB82976D9BD0030A63B /* ContentView.swift */,
+				E8019BC7297D5F5B0030A63B /* ScannerView.swift */,
+				E8019BB82976D9BD0030A63B /* BarcodeScannerView.swift */,
+				E8019BC5297D53A90030A63B /* ScannerViewController.swift */,
 				E8019BBA2976D9BE0030A63B /* Assets.xcassets */,
 				E8019BBC2976D9BE0030A63B /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8019BB92976D9BD0030A63B /* ContentView.swift in Sources */,
+				E8019BB92976D9BD0030A63B /* BarcodeScannerView.swift in Sources */,
+				E8019BC8297D5F5B0030A63B /* ScannerView.swift in Sources */,
+				E8019BC6297D53A90030A63B /* ScannerViewController.swift in Sources */,
 				E8019BB72976D9BD0030A63B /* BarcodeScannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,7 +203,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -270,6 +278,8 @@
 				DEVELOPMENT_TEAM = DHKYX69V83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BarcodeScanner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to use camera to scan barcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +309,8 @@
 				DEVELOPMENT_TEAM = DHKYX69V83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BarcodeScanner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to use camera to scan barcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
